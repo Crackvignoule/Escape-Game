@@ -1,0 +1,27 @@
+#:kivy 1.11
+
+<Formulaire>:
+    title: 'Formulaire'
+    auto_dismiss: False
+    txt:txt
+    img:img
+
+    GridLayout:
+        cols: 1
+        size: (root.width,root.height)
+        spacing: 10
+
+        Image:
+            id:img
+            source:''
+
+        Label:
+            id: txt
+            text:"Signal"
+
+        Button:
+            id: lancer
+            text:"LANCER"
+            on_press: root.update()
+
+    

@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+}
+p,h2,h1{
+    padding: 10px;
+    
+}
+input,button{
+    margin: 10px;
+}
+div{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+.haut{
+    background-color: #26282C;
+    
+}
+.titre_page{
+    color: white;
+    border: 3px solid white;
+}
+.btn_accueil{
+    float: right;
+}
+.titre_section{
+    color: white;
+    border-bottom: 2px solid white;
+}
+.numero_enigme{
+    border: 3px solid white;
+    border-radius: 10%;
+    padding: 3px;
+}
+.milieu_1{
+    color: white;
+    background-color: #40355a;
+    flex-direction: column;
+    padding: 30px;
+
+}
+.milieu_2{
+    background-color: #a2537a;
+    color: white;
+    flex-direction: column;
+
+}
+.milieu_3{
+    
+}
+.indice_button{
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    
+}
+.indice_button:hover{
+    background: #f44336
+}
+.indice_button:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px)
+}
+#more {
+    display: none;
+}
+.bas{
+    background-color: #14248A;
+    color: white;
+    
+    
+}

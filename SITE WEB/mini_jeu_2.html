@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Escape Game</title>
+</head>
+
+<body>
+
+    <div class="haut">
+        <h1 class="titre_page">ESCAPE GAME</h1>
+        <a href="index.html"><button class="btn_accueil">Accueil</button></a>
+    </div>
+
+    <div class="milieu_1">
+        <h2 class="titre_section">Enigme <span class="numero_enigme">2</span></h2>
+        <p style="margin: 0px 50px 0px 50px">Bienvenue sur la deuxième énigme</p>
+        <p>- A partir de votre réponse précedente, vous savez quel équipement utilisé mais sur quoi et ou ?</p>
+        <p>- Dans l'armoire métallique au fond de la salle se trouve de nombreuses boites, nous savons qu'une d'entre elle à un comportement particulier</p> 
+        <p>- Trouver un moyen externe de griller l'intru via l'équipement que vous possédez</p>
+        <p>- Pour valider l'étape, rentrer la réponse qui vous semble la plus logique par rapport au déroulement de l'epreuve</p>
+
+
+    </div>
+
+    <div class="milieu_2">
+        <h2 class="titre_section">Votre réponse</h2>
+        <form action="" style="margin: 10px;"onsubmit="return false;">
+            <input type="text" id="reponse">
+            <button style="cursor: pointer" onclick="validation()">Valider</button>
+            <button style="cursor: pointer" onclick="clean()">Effacer</button>
+        </form>
+        <span id="msg"></span>
+    </div>
+
+    <div class="milieu_3'">
+        <button class="indice_button" onclick="myFunction()">Indice</button>
+        <p><span id="dots"></span><span id="more">L'intru est sensible aux infrarouges</span></p>
+    </div>
+
+    <div class="bas">
+        <p>En cas de soucis technique, addressez-vous à FOURNIER Jérémy</p>
+    </div>
+
+</body>
+
+<script>
+function myFunction() {
+
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("indice_button");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    moreText.style.display = "inline";
+  }
+}
+
+function validation() {
+    var msg; 
+    var str = document.getElementById("reponse").value; 
+    if (str.match("77MHz")){
+        msg = "<p style='color:green'>VRAI</p>";
+        setTimeout(redirection, 1000)
+    }
+    else {
+        msg = "<p style='color:red'>FAUX</p>"; 
+    }
+    document.getElementById("msg").innerHTML = msg; 
+  
+}
+function redirection(){
+    alert("BRAVO, tu vas être redirigé vers l'autre épreuve");
+    var ip = location.href;
+    let lastSlashIndex = ip.lastIndexOf("/");
+    let newUrl = ip.substring(0, lastSlashIndex)
+    var saut = String(newUrl + "/mini_jeu_3.html")
+    window.location.href = saut;
+}
+    
+
+
+function clean() {
+    var msg; 
+    var champs = document.getElementById("reponse"); 
+    champs.value="";
+    document.getElementById("msg").innerHTML= ""; 
+}
+</script>
+
+
+</html>

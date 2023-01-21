@@ -1,0 +1,106 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <title>Escape Game</title>
+</head>
+
+<body>
+
+    <div class="haut">
+        <h1 class="titre_page">ESCAPE GAME</h1>
+    </div>
+
+    <div class="milieu_1">
+        <h2 class="titre_section">PRESENTATION</h2>
+        <p style="margin: 0px 50px 0px 50px;">Bienvenue sur notre escape game, vous allez passer par plusieurs étapes avec différents niveaux de difficulté. Formez un équipe de 2 personnes au minimum pour avancer tout en s’amusant. Vous allez avoir besoin d’un téléphone ainsi que de votre cerveau (activé). Le but étant de trouver la solution finale qui vous permettra d’obtenir une récompense !</p>
+    </div>
+    
+    <div class="milieu_1">
+        <h2 class="titre_section">EQUIPEMENT</h2>
+        <p style="margin: 0px 50px 0px 50px;">Pour chaque mini-jeux vous aurez à votre dispostion certains équipement afin de pouvoir trouver la réponse, voici la liste</p>
+        <ul>
+            <li>Un raspberry avec mini-ecran</li>
+            <li>Une clef radio</li>
+            <li>Un poste linux</li>
+            <li>Un téléphone(le votre)</li>
+        </ul>
+    </div>
+
+    <div class="milieu_2">
+        <h2 class="titre_section">CHOIX MINI-JEUX</h2>
+    </div>
+
+    <div class="milieu_3'">
+            <div class="row">
+                <div class="column" onclick="openTab('b1');" style="background:#40355a;">
+                    ETAPE 1
+                </div>
+                <div class="column" onclick="openTab('b2');" style="background:#693f68;">
+                    ETAPE 2
+                </div>
+                <div class="column" onclick="openTab('b3');" style="background:#a2537a;">
+                    ETAPE 3
+                </div>
+                <div class="column" onclick="openTab('b4');" style="background:#eb768b;">
+                    ETAPE 4
+                </div>
+            </div>
+
+            <!-- Full-width columns: (hidden by default) -->
+            <div id="b1" class="containerTab" style="display:none;background:#40355a">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <h2>ETAPE 1</h2>
+                <p>Vous allez utiliser la technolgie BLE ainsi que de votre environnement afin de retrouver la cachete secrete</p>
+                <button><a href="mini_jeu_1.html">Commencer</a></button>
+            </div>
+
+            <div id="b2" class="containerTab" style="display:none;background:#693f68">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <h2>ETAPE 2</h2>
+                <p>Un intru est caché dans le groupe mais lequel ?</p>            
+                <button><a href="mini_jeu_2.html">Commencer</a></button>
+            </div>
+
+            <div id="b3" class="containerTab" style="display:none;background:#a2537a">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <h2>ETAPE 3</h2>
+                <p>Une mystérieuse radio pirate semble diffuser quelque chose de louche</p>            
+                <button><a href="mini_jeu_3.html">Commencer</a></button>
+            </div>
+
+            <div id="b4" class="containerTab" style="display:none;background:#eb768b">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <h2>ETAPE 4</h2>
+                <p>Un message à décoder sur une messagerie, comme c'est bizarre</p>
+                <button><a href="mini_jeu_4.html">Commencer</a></button>
+            </div>
+    </div>
+
+    
+
+    <div class="bas">
+        <p>En cas de soucis technique, addressez-vous à FOURNIER Jérémy</p>
+    </div>
+
+</body>
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+
+
+</html>

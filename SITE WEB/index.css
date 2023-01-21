@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    box-sizing: border-box
+}
+p,h2,h1{
+    padding: 10px;
+    
+}
+input,button{
+    margin: 10px;
+}
+body{
+    background-color: #D4C2FC;
+}
+div{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+.haut{
+    background-color: #26282C;
+    
+}
+.titre_page{
+    color: white;
+    border: 3px solid white;
+}
+.titre_section{
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.milieu_1{
+    color: white;
+    background-color: #998FC7;
+    flex-direction: column;
+
+}
+.milieu_2{
+    background-color: #D4C2FC;
+    color: white;
+}
+.milieu_3{
+    background-color: #F9F5FF;
+    text-align:center
+
+}
+
+.bas{
+    background-color: #14248A;
+    color: white;
+}
+
+/* The grid: Three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .containerTab {
+    padding: 20px;
+    color: white;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Closable button inside the container tab */
+  .closebtn {
+    float: right;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
